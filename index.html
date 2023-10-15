@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SARA - Password Generator</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>PASSWORD GENERATOR</h1>
+        <div class="display-container">
+            <input type="text" readonly class="display" id="display" placeholder="PASSWORD">
+            <button id="copyButton">
+                <span id="copied"></span>
+                <img src="./images/copy.svg" alt="" height="23" width="23">
+            </button>
+        </div>
+
+        <div class="input-container">
+            <div class="length-container">
+                <p>Password Length</p>
+                <p id="passLen">0</p>
+            </div>
+            <input type="range" name="range" class="slider" id="range" step="1" min="1" max="20">
+
+            <div class="check">
+                <input type="checkbox" name="uppercase" id="uppercase">
+                <label for="uppercase">Include Uppercase Letters</label>
+            </div>
+
+            <div class="check">
+                <input type="checkbox" name="lowercase" id="lowercase">
+                <label for="lowercase">Include Lowercase Letters</label>
+            </div>
+
+            <div class="check">
+                <input type="checkbox" name="number" id="number">
+                <label for="number">Include Numbers</label>
+            </div>
+
+            <div class="check">
+                <input type="checkbox" name="symbol" id="symbol">
+                <label for="symbol">Include Symbols</label>
+            </div>
+
+            <div class="strength-container">
+                <p>Strength</p>
+                <div class="indicator" id="indicator"></div>
+            </div>
+
+            <button class="generateButton" id="genPass">GENERATE PASSWORD</button>
+
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/13e2fe68a8.js" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
