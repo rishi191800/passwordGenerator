@@ -154,6 +154,11 @@ genPass.addEventListener("click", () => {
 
     password = "";
 
+    if(passwordLength < checkBoxCount){
+        passwordLength = checkBoxCount;
+        handleRange();
+    }
+
     let functionArray = [];
     if(uppercaseCheck.checked){
         functionArray.push(generateUppercaseLetter);
