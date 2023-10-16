@@ -22,7 +22,9 @@ indicator.style.backgroundColor = "grey";
 function handleRange(){
     range.value = passwordLength;
     passLen.innerHTML = passwordLength;
-
+    let min = range.min;
+    let max = range.max;
+    range.style.backgroundSize = ((passwordLength - min) * 100 / (max - min)) + "% 100%";
 }
 
 range.addEventListener('input', (e)=>{
